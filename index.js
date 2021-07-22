@@ -32,6 +32,7 @@ app.use(express.json({ extended: true }));
 
 app.use('/api/stores', require('./routes/stores.router'));
 app.use('/api/bakery', require('./routes/bakery.router'));
+app.use('/api/home', require('./routes/home.router'));
 
 const PORT = config.get('port') || 5000;
 
