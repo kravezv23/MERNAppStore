@@ -1,0 +1,4 @@
+@import "~materialize-css/dist/css/materialize.min.css";
+th {
+    border: 1px solid #e4dede;
+}

@@ -1,0 +1,4 @@
+{
+  "port": 5000,
+  "mongoURI": "mongodb+srv://admin:admin@cluster0.tvje4.mongodb.net/store_and_storage?retryWrites=true&w=majority"
+}
