@@ -9,7 +9,8 @@ export const BakeryPage = () => {
         min_prod: '',
         max_prod: ''
     })
-
+    const [bakery] = useState(null)
+    console.log(bakery);
     useEffect(() => {
         message(error);
         clearError();
@@ -42,7 +43,7 @@ export const BakeryPage = () => {
                     <label htmlFor="max_prod">Max производство в день: </label>
                 </div>
                 <div className="input-field col s2">
-                    <button className="btn waves-effect waves-light" type="submit" onClick={addOption}>Изменить</button>
+                    <button className="btn waves-effect waves-light" type="submit" onClick={addOption} disabled={loading}>Изменить</button>
                 </div>
             </div>
             <table className="striped centered">

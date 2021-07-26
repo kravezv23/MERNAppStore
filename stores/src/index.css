@@ -2,3 +2,6 @@
 th {
     border: 1px solid #e4dede;
 }
+#toast-container {
+    right: 0;
+}
