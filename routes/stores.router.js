@@ -1,29 +1,13 @@
 const {Router} = require('express');
 const Stores = require('../models/Stores');
 const Options = require('../models/Options');
-// const {check, validationResult} = require('express-validator')
 const router = Router();
-
-// router.get('/stores', {
-//     title: 'Магазины'
-// })
-
-
 
 // api/stores/add
 // Создание нового магазина.
 
 router.post('/add', async (req, res) => {
     try{
-        // const errors = validationResult(req);
-        //
-        // if(!errors.isEmpty()){
-        //     return res.status(400).json({
-        //         errors: errors.array(),
-        //         message: 'Введенны не коректные данные!'
-        //     })
-        // }
-
         const {name_store} = req.body;
 
         if (name_store == '') {
@@ -63,7 +47,7 @@ router.post('/addOption', async (req, res) => {
             return res.status(400).json({ message: 'Такого магазина не существует. Невозможно задать лимит заказа.' });
         }
 
-        const optionStore = `option_store_order_${store._id}`;
+        const optionStore = `option_store_order-${store._id}`;
         const option = await Options.findOne({name: optionStore});
 
         if(!option){
